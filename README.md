@@ -112,3 +112,60 @@ function Button({ displayText }) {
   return <button>{displayText}</button>;
 }
 ```
+
+## Pass Props From Component To Component
+
+You have learned how to pass a prop to a component:
+
+```jsx
+<Greeting firstName="Esmerelda" />
+```
+
+You have also learned how to access and display a passed-in prop:
+
+```jsx
+return <h1>{props.firstName}</h1>;
+```
+
+The most common use of props is to pass information to a component from a different component.
+
+Props in React travel in a one-way direction, from the top to bottom, parent to child.
+
+Let’s explore the parent-child relationship of passing props a bit further.
+
+```jsx
+function App() {
+    return <Product name="Apple Watch" price={399} rating="4.5/5.0" />;
+}
+```
+
+In this example, `App` is the parent, and `Product` is the child. `App` passes three props to `Product` (name, price, and rating), which can then be read inside the child component.
+
+Props passed down are immutable, meaning they cannot be changed. If a component wants new values for its props, it needs to rely on the parent component to pass it new ones.
+
+Let’s practice this!
+
+### Instructions
+
+**Checkpoint 1:**
+1. Your mission is to pass a prop to `Player` from `App`.
+   Ensure that `Player` can accept props by changing the function definition to include `props` in the parameter.
+
+**Checkpoint 2:**
+2. Next, display the name of the song in the `<h1></h1>` tag by injecting the `songName` value from `props.
+
+**Checkpoint 3:**
+3. Display the name of the artist in the `<h2></h2>` tag by injecting the `artist` value from `props.
+
+**Checkpoint 4:**
+4. Since `App` is passing props to `Player`, `App` is the parent and `Player` is the child.
+   Inside of `Player.js`, export the component to be used in `App.js.
+
+**Checkpoint 5:**
+5. Open `App.js`. Import the `Player` component in `App.js.
+
+**Checkpoint 6:**
+6. In the `App` component, call the `Player` component with the attributes `songName`, giving it a string of your favorite song, and the artist of the song.
+```
+
+The text is now formatted in Markdown.
